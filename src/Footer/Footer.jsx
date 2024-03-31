@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        Footer
+        Website made by Sam Ebersole.
       </div>
     </footer>
   );
