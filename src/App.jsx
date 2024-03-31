@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import './reset.css';
 import './app.css';
@@ -91,7 +92,7 @@ const LOREM = [
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <main>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</main>
       <footer>
@@ -99,7 +100,7 @@ function App() {
           Footer
         </div>
       </footer>
-    </>
+    </BrowserRouter>
   );
 }
 

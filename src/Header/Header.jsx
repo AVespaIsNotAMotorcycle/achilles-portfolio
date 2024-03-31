@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link, useLocation } from 'react-router-dom';
 
 import './header.css';
 
@@ -9,7 +10,11 @@ const PAGES = [
 ];
 
 function HeaderLink({ page }) {
-  return <li><a href={page.href}>{page.label}</a></li>;
+  const { pathname } = useLocation();
+  const currentPage = pathname === page.href;
+  const className = currentPage ? 'current' : undefined;
+
+  return <li><Link className={className} to={page.href}>{page.label}</Link></li>;
 }
 HeaderLink.propTypes = {
   page: propTypes.shape({
@@ -22,7 +27,7 @@ export default function Header() {
   return (
     <header>
       <div>
-        Achilles Batista
+        <div className="logo">Achilles Batista</div>
         <nav>
           <ul>
             {PAGES.map((page) => <HeaderLink key={page.label} page={page} />)}

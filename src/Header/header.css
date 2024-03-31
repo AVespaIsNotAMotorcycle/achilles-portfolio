@@ -1,5 +1,7 @@
 header {
   border-bottom: 1px solid black;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 header div {
@@ -7,9 +9,49 @@ header div {
   justify-content: space-between;
 }
 
+header div .logo {
+  color: var(--color-brand);
+}
+
 header nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   list-style-type: none;
   padding: 0;
-};
+}
+
+header nav a {
+  color: inherit;
+  text-decoration: none;
+  --transition-time: 0.2s;
+  transition: color var(--transition-time);
+  position: relative;
+}
+header nav a:hover,
+header nav a:focus {
+  color: var(--color-brand);
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  top: 100%;
+  height: 5px;
+  background: var(--color-brand);
+
+  transition-property: transform opacity;
+  transition-duration: var(--transition-time);
+  opacity: 0;
+  transform: scaleX(0%);
+}
+
+header nav a.current {
+  color: var(--color-brand);
+}
+header nav a.current::after {
+  opacity: 1;
+  transform: scaleX(100%);
+}
