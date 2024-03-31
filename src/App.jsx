@@ -5,6 +5,7 @@ import './reset.css';
 import './app.css';
 
 import Header from './Header';
+import Footer from './Footer';
 
 const LOREM = [
   `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -95,11 +96,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <main>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</main>
-      <footer>
-        <div>
-          Footer
-        </div>
-      </footer>
+      <Footer />
     </BrowserRouter>
   );
 }
