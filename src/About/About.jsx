@@ -55,7 +55,6 @@ Heading.propTypes = {
 
 function Section({ section, level }) {
   const { title, body } = section;
-  console.log(section);
   return (
     <section>
       <Heading level={level} text={title} />

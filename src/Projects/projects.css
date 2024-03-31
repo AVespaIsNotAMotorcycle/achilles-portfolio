@@ -1,0 +1,54 @@
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 1rem;
+}
+
+.projects-list section {
+  --padding: 1rem;
+  padding: var(--padding);
+  border: 2px solid var(--color-neutral-dark);
+  position: relative;
+}
+.projects-list section h2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  z-index: -1;
+  background-image: linear-gradient(var(--color-neutral-dark), var(--color-neutral-dark), rgba(0, 0, 0, 0));
+}
+.projects-list section h2 {
+  display: block;
+  left: var(--padding);
+  right: var(--padding);
+  position: absolute;
+
+  isolation: isolate;
+  padding: var(--padding);
+}
+.projects-list section img {
+}
+
+.projects-list a {
+  display: block;
+  width: 100%;
+  transition-duration: 0.2s;
+  transition-property: color border-color outline-color;
+  
+  color: var(--color-neutral-light);
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-neutral-dark);
+
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgba(0, 0, 0, 0);
+}
+.projects-list a:focus,
+.projects-list a:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+  outline-color: var(--color-brand);
+}
