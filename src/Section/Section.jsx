@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import Markdown from 'react-markdown';
 
 import './section.css';
 
@@ -23,7 +24,7 @@ export default function Section({ section, level }) {
   return (
     <section className="markdown-section">
       <Heading level={level} text={title} />
-      {typeof body === 'string' && <p>{body}</p>}
+      {typeof body === 'string' && <Markdown>{body}</Markdown>}
       {Array.isArray(body)
         && body.map((chunk) => <Section key={chunk.title} level={level + 1} section={chunk} />)}
     </section>

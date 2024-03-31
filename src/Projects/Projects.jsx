@@ -24,6 +24,7 @@ const PROJECTS = {
   'audio-sensor-support': {
     name: 'Audio Sensor Support',
     image: AudioSensorSupportImage,
+    details: [],
   },
 };
 
