@@ -1,0 +1,11 @@
+header div,
+main,
+footer div {
+  margin: 2rem auto;
+  max-width: min(800px, calc(100% - 4rem));
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

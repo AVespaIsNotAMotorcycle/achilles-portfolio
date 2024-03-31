@@ -1,0 +1,15 @@
+header {
+  border-bottom: 1px solid black;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+};
