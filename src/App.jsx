@@ -1,11 +1,18 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Outlet,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 import './reset.css';
 import './app.css';
 
 import Header from './Header';
 import Footer from './Footer';
+
+import About from './About';
 
 const LOREM = [
   `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -94,9 +101,23 @@ const LOREM = [
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <main>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</main>
-      <Footer />
+      <Routes>
+        <Route
+          path=""
+          element={(
+            <>
+              <Header />
+              <main>
+                <Outlet />
+              </main>
+              <Footer />
+            </>
+          )}
+        >
+          <Route index element={<>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</>} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
