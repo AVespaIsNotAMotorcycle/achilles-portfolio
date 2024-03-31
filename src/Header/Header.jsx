@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './header.css';
 
 const PAGES = [
-  { href: '/', label: 'Work' },
+  { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
 ];
 

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrowserRouter,
   Outlet,
+  Navigate,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -114,7 +115,8 @@ function App() {
             </>
           )}
         >
-          <Route index element={<>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</>} />
+          <Route index element={<Navigate to="/projects" />} />
+          <Route path="projects" element={<>{LOREM.map((chunk) => <p key={chunk}>{chunk}</p>)}</>} />
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
