@@ -3,6 +3,8 @@ html {
   --color-neutral-dark: #341f58;
   --color-brand: #f45330;
 
+  --max-width: 800px;
+
   font-family: helvetica, system-ui, sans-serif;
   font-size: 18px;
 
@@ -14,7 +16,7 @@ header > div,
 main,
 footer > div {
   margin: 2rem auto;
-  max-width: min(800px, calc(100% - 4rem));
+  max-width: min(var(--max-width), calc(100% - 4rem));
 }
 
 p {

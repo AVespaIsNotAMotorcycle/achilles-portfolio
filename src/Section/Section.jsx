@@ -6,11 +6,11 @@ import './section.css';
 
 function Heading({ text, level }) {
   switch (level) {
-    case 6: return <h6>{text}</h6>;
-    case 5: return <h5>{text}</h5>;
-    case 4: return <h4>{text}</h4>;
-    case 3: return <h3>{text}</h3>;
-    case 2: return <h2>{text}</h2>;
+    case 6: return <h6 id={text}>{text}</h6>;
+    case 5: return <h5 id={text}>{text}</h5>;
+    case 4: return <h4 id={text}>{text}</h4>;
+    case 3: return <h3 id={text}>{text}</h3>;
+    case 2: return <h2 id={text}>{text}</h2>;
     default: return null;
   }
 }

@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Section from '../Section';
+import TableOfContents from '../TableOfContents';
 
 import './projects.css';
 
@@ -34,6 +35,7 @@ function ProjectPage() {
   return (
     <>
       <h1>{name}</h1>
+      <TableOfContents sections={details} />
       <img alt="" src={image} />
       {details.map((section) => <Section key={section.title} section={section} level={2} />)}
     </>
