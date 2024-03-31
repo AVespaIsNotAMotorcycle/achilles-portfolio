@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from 'react-router-dom';
 
 import './projects.css';
 
@@ -17,14 +22,31 @@ const PROJECTS = [
   },
 ];
 
-export default function Projects() {
+function pathToName(pathSegment) {
+  return pathSegment
+    .split('-')
+    .map((word) => word.substring(0, 1).toUpperCase().concat(word.substring(1)))
+    .join(' ');
+}
+function nameToPath(name) {
+  return name.toLowerCase().replaceAll(' ', '-');
+}
+
+function ProjectPage() {
+  const { projectName } = useParams();
+  return (
+    <h1>{pathToName(projectName)}</h1>
+  );
+}
+
+function ProjectsPage() {
   return (
     <>
       <h1>Projects</h1>
       <div className="projects-list">
         {PROJECTS.map((project) => (
           <section key={project.name}>
-            <Link to="coffer-deck-box">
+            <Link to={nameToPath(project.name)}>
               <h2>{project.name}</h2>
               <img alt="" src={project.image} />
             </Link>
@@ -32,5 +54,14 @@ export default function Projects() {
         ))}
       </div>
     </>
+  );
+}
+
+export default function Projects() {
+  return (
+    <Routes>
+      <Route index element={<ProjectsPage />} />
+      <Route path=":projectName" element={<ProjectPage />} />
+    </Routes>
   );
 }

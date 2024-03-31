@@ -33,7 +33,7 @@ function App() {
           )}
         >
           <Route index element={<Navigate to="/projects" />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="projects/*" element={<Projects />} />
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
