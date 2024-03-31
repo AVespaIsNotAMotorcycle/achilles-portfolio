@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './reset.css';
-import './App.css';
+import './app.css';
 
 import Header from './Header';
 
