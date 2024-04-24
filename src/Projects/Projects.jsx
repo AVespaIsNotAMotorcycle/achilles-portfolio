@@ -11,21 +11,28 @@ import TableOfContents from '../TableOfContents';
 
 import './projects.css';
 
-import CofferDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
+import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
 import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
+import ThimbleImage from './Thimble/thimble.jpg';
 
 import DeckBox from './DeckBox';
+import Thimble from './Thimble';
 
 const PROJECTS = {
-  'coffer-deck-box': {
-    name: 'Coffer Deck Box',
-    image: CofferDeckBoxImage,
+  'penny-deck-box': {
+    name: 'The Penny Deck Box: An Open-Source Deck Box',
+    image: PennyDeckBoxImage,
     details: DeckBox,
   },
   'audio-sensor-support': {
     name: 'Audio Sensor Support',
     image: AudioSensorSupportImage,
     details: [],
+  },
+  thimble: {
+    name: 'The Thimble: Innovating Water Pipe Maintenance',
+    image: ThimbleImage,
+    details: Thimble,
   },
 };
 
