@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import './tableOfContents.css';
 
 function renderHeader(text) {
-  if (Array.isArray(text)) return text.join(' - ');
+  if (Array.isArray(text)) return text[0];
   return text;
 }
 
