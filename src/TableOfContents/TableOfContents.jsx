@@ -9,7 +9,6 @@ function renderHeader(text) {
 }
 
 export default function TableOfContents({ sections }) {
-  console.log(sections);
   return (
     <nav className="table-of-contents">
       <h2>Table of Contents</h2>
