@@ -14,10 +14,13 @@ header div .logo {
 }
 
 header nav ul {
+  --gap: 2rem;
+  margin-left: var(--gap);
   display: flex;
-  gap: 2rem;
+  column-gap: var(--gap);
   list-style-type: none;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 header nav a {
