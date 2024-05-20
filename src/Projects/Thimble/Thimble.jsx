@@ -61,45 +61,43 @@ export default function Thimble() {
         </div>
       </Section>
       <Section id="how-it-works">
-        <img
-          src={SUBSYSTEMS_IMAGE}
-          alt="The Thimble with one end removed, revealing wires inside."
-        />
-        <ol>
-          <li>
-            Central Propeller
-
-            {`The Thimble is propelled by an ApisQueen Underwater Thruster, which pushes water
-            back through each of four side channels. These release the water at a 45 degree
-            angle, allowing half of the thrust to advance the Thimble, and the other half to
-            be used for turning and adjustment.`}
-          </li>
-          <li>
-            Butterfly Valves
-
-            {`Each side channel features a butterfly valve, which can rotate to block flow
-            through the channel or allow water to pass through unhindered. Each valve is
-            controlled by a Miuzei 9g servo motor, stored safely in the Thimble's waterproof
-            back chamber.`}
-          </li>
-          <li>
-            Camera and IMU
-
-            {`The Thimble's sensor suite includes both a camera and an Inertial Measurement
-            Unit (IMU). The camera looks out through an acrylic window and is illuminated by
-            an integrated LED, recording a video feed for operators to review. The IMU allows
-            operators to monitor the acceleration and tilt of the thimble for the duration of
-            its journey.`}
-          </li>
-          <li>
-            Tether and Spool
-
-            {`At all times, the Thimble is connected to the surface using a tether. The tether
-            features both a steel cable for strength, and wiring to power and relay data to
-            each other subsystem. This means it cannot be lost in the city's subterranean
-            water mains, and it can report its signal and receive live controls from its operators.`}
-          </li>
-        </ol>
+        <div className="grid">
+          <img
+            src={SUBSYSTEMS_IMAGE}
+            alt="The Thimble with one end removed, revealing wires inside."
+          />
+          <ol>
+            <li>
+              <h3>01. Central Propeller</h3>
+              {`The Thimble is propelled by an ApisQueen Underwater Thruster, which pushes water
+              back through each of four side channels. These release the water at a 45 degree
+              angle, allowing half of the thrust to advance the Thimble, and the other half to
+              be used for turning and adjustment.`}
+            </li>
+            <li>
+              <h3>02. Butterfly Valves</h3>
+              {`Each side channel features a butterfly valve, which can rotate to block flow
+              through the channel or allow water to pass through unhindered. Each valve is
+              controlled by a Miuzei 9g servo motor, stored safely in the Thimble's waterproof
+              back chamber.`}
+            </li>
+            <li>
+              <h3>03. Camera and IMU</h3>
+              {`The Thimble's sensor suite includes both a camera and an Inertial Measurement
+              Unit (IMU). The camera looks out through an acrylic window and is illuminated by
+              an integrated LED, recording a video feed for operators to review. The IMU allows
+              operators to monitor the acceleration and tilt of the thimble for the duration of
+              its journey.`}
+            </li>
+            <li>
+              <h3>04. Tether and Spool</h3>
+              {`At all times, the Thimble is connected to the surface using a tether. The tether
+              features both a steel cable for strength, and wiring to power and relay data to
+              each other subsystem. This means it cannot be lost in the city's subterranean
+              water mains, and it can report its signal and receive live controls from its operators.`}
+            </li>
+          </ol>
+        </div>
       </Section>
       <Section id="operation">
         <img
