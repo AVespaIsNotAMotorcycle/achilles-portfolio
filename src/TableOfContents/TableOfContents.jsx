@@ -3,38 +3,24 @@ import propTypes from 'prop-types';
 
 import './tableOfContents.css';
 
-const DETAILS_PROPS = propTypes.shape({
-  title: propTypes.string,
-  body: propTypes.oneOfType([
-    propTypes.string,
-    propTypes.arrayOf(Object),
-  ]),
-});
-
-function Siblings({ details }) {
-  const { title, body } = details;
-  const href = `#${title}`;
-  if (typeof body !== 'string' && !Array.isArray(body)) return null;
-  if (typeof body === 'string') return <li><a href={href}>{title}</a></li>;
-  return (
-    <li>
-      <a href={href}>{title}</a>
-      <ol>
-        {body.map((section) => <Siblings key={section.title} details={section} />)}
-      </ol>
-    </li>
-  );
+function renderHeader(text) {
+  if (Array.isArray(text)) return text.join(' - ');
+  return text;
 }
-Siblings.propTypes = { details: DETAILS_PROPS.isRequired };
 
 export default function TableOfContents({ sections }) {
+  console.log(sections);
   return (
     <nav className="table-of-contents">
       <h2>Table of Contents</h2>
       <ol>
-        {sections.map((section) => <Siblings key={section.title} details={section} />)}
+        {Object.keys(sections).map((id) => (
+          <li><a key={id} href={`#${id}`}>{renderHeader(sections[id])}</a></li>
+        ))}
       </ol>
     </nav>
   );
 }
-TableOfContents.propTypes = { sections: propTypes.arrayOf(DETAILS_PROPS).isRequired };
+TableOfContents.propTypes = {
+  sections: propTypes.instanceOf(Object).isRequired,
+};

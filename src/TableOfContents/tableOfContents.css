@@ -28,6 +28,9 @@
 
   transition-property: background-color color;
   transition-duration: 0.2s;
+
+  display: block;
+  width: fit-content;
 }
 .table-of-contents a:hover,
 .table-of-contents a:focus {

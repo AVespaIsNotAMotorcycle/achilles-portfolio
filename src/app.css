@@ -3,7 +3,7 @@ html {
   --color-neutral-dark: #341f58;
   --color-brand: #f45330;
 
-  --max-width: 800px;
+  --max-width: 1000px;
 
   font-family: helvetica, system-ui, sans-serif;
   font-size: 18px;
@@ -22,4 +22,10 @@ footer > div {
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+img { border-radius: 5px; }
+h1, h2 {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }

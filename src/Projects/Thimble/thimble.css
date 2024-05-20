@@ -1,0 +1,32 @@
+.thimble #our-purpose {
+  display: grid;
+}
+
+.thimble span { display: block; }
+.thimble h2 span:not(:nth-child(2)) {
+  font-size: 0.75em;
+}
+
+.thimble #our-purpose img {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.thimble #our-purpose p {
+}
+/*
+.thimble #our-purpose .grid * {
+  outline: 2px solid var(--color-brand);
+}
+.thimble #our-purpose .grid {
+  outline: 2px solid var(--color-brand);
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-template-rows: fit-content repeat(auto-fit, 1fr);
+  column-gap: 1rem;
+}
+.thimble #our-purpose .grid img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+*/

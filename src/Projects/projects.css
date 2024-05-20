@@ -23,6 +23,7 @@
   left: var(--padding);
   right: var(--padding);
   position: absolute;
+  margin: 0;
 
   isolation: isolate;
   padding: var(--padding);
