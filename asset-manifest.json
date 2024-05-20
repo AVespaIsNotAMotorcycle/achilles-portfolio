@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/achilles-portfolio/static/css/main.899d8214.css",
+    "main.css": "/achilles-portfolio/static/css/main.f79b4754.css",
     "main.js": "/achilles-portfolio/static/js/main.1944274b.js",
     "static/js/453.60308f01.chunk.js": "/achilles-portfolio/static/js/453.60308f01.chunk.js",
     "static/media/thimble-operation.webp": "/achilles-portfolio/static/media/thimble-operation.d8bce1363a1bf6e7c898.webp",
@@ -8,12 +8,12 @@
     "static/media/thimble.jpg": "/achilles-portfolio/static/media/thimble.a4de0b9f2cefcfb445ec.jpg",
     "static/media/thimble-purpose.webp": "/achilles-portfolio/static/media/thimble-purpose.697dab28008e4219acba.webp",
     "index.html": "/achilles-portfolio/index.html",
-    "main.899d8214.css.map": "/achilles-portfolio/static/css/main.899d8214.css.map",
+    "main.f79b4754.css.map": "/achilles-portfolio/static/css/main.f79b4754.css.map",
     "main.1944274b.js.map": "/achilles-portfolio/static/js/main.1944274b.js.map",
     "453.60308f01.chunk.js.map": "/achilles-portfolio/static/js/453.60308f01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.899d8214.css",
+    "static/css/main.f79b4754.css",
     "static/js/main.1944274b.js"
   ]
 }
