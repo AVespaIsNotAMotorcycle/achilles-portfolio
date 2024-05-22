@@ -1,6 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+import Heading from '../../Heading';
+
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
 import OPERATION_IMAGE from './thimble-operation.webp';
@@ -15,20 +17,10 @@ export const SECTIONS = {
   'cad-models': { name: 'CAD Models' },
 };
 
-function Header({ children }) {
-  if (Array.isArray(children)) {
-    return <h2>{children.map((child) => <span key={child}>{child}</span>)}</h2>;
-  }
-  return <h2>{children}</h2>;
-}
-Header.propTypes = {
-  children: propTypes.node.isRequired,
-};
-
 function Section({ id, children }) {
   return (
     <section id={id}>
-      <Header>{SECTIONS[id].name}</Header>
+      <Heading>{SECTIONS[id].name}</Heading>
       {children}
     </section>
   );

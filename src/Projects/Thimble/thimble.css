@@ -2,11 +2,6 @@
   display: grid;
 }
 
-.thimble span { display: block; }
-.thimble h2 span:not(:nth-child(2)) {
-  font-size: 0.75em;
-}
-
 .thimble #our-purpose img {
   float: left;
   margin-right: 1rem;

@@ -1,0 +1,4 @@
+.heading span { display: block; }
+.heading span:not(:nth-child(2)) {
+  font-size: 0.75em;
+}
