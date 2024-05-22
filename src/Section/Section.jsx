@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 
 import { LevelContext } from './levelContext';
+
+import { ProjectContext } from '../Projects/ProjectContext';
 
 import Heading from '../Heading';
 
 export default function Section({
   id,
-  sections,
   children,
   level,
 }) {
+  const { sections } = useContext(ProjectContext);
   return (
     <section id={id}>
       <LevelContext.Provider value={level}>
@@ -22,7 +24,6 @@ export default function Section({
 }
 Section.propTypes = {
   id: propTypes.string.isRequired,
-  sections: propTypes.instanceOf(Object).isRequired,
   children: propTypes.node,
   level: propTypes.number,
 };

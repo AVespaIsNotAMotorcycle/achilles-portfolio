@@ -14,5 +14,9 @@ export const SECTIONS = {
 };
 
 export default function DeckBox() {
-  return <div />;
+  return (
+    <div className="deck-box">
+      Lorem ipsum dolor sit amet.
+    </div>
+  );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
-import propTypes from 'prop-types';
 
-import Heading from '../../Heading';
+import Section from '../../Section';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
@@ -15,19 +14,6 @@ export const SECTIONS = {
   operation: { name: ['Operation', 'Fire Hydrant Entry'] },
   testing: { name: 'Thimble Testing' },
   'cad-models': { name: 'CAD Models' },
-};
-
-function Section({ id, children }) {
-  return (
-    <section id={id}>
-      <Heading>{SECTIONS[id].name}</Heading>
-      {children}
-    </section>
-  );
-}
-Section.propTypes = {
-  id: propTypes.string.isRequired,
-  children: propTypes.node.isRequired,
 };
 
 export default function Thimble() {

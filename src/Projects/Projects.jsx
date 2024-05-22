@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   Routes,
   Route,
@@ -11,6 +11,7 @@ import {
 import TableOfContents from '../TableOfContents';
 
 import './projects.css';
+import { ProjectContext } from './ProjectContext';
 
 import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
 import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
@@ -47,14 +48,15 @@ function ProjectPage() {
     sections,
     Component,
   } = PROJECTS[projectName];
+  const value = useMemo(() => ({ name, sections }), [projectName]);
   return (
-    <>
+    <ProjectContext.Provider value={value}>
       <h1>{name}</h1>
       <TableOfContents sections={sections} />
       <img alt="" src={image} />
       <Component />
       {/* details.map((section) => <Section key={section.title} section={section} level={2} />) */}
-    </>
+    </ProjectContext.Provider>
   );
 }
 
