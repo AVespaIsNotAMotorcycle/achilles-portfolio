@@ -5,9 +5,7 @@ import {
   Link,
   useParams,
 } from 'react-router-dom';
-// import Markdown from 'react-markdown';
 
-// import Section from '../Section';
 import TableOfContents from '../TableOfContents';
 
 import './projects.css';
@@ -19,6 +17,9 @@ import ThimbleImage from './Thimble/thimble.jpg';
 
 import DeckBox, { SECTIONS as DeckBoxSections } from './DeckBox/DeckBox';
 import Thimble, { SECTIONS as ThimbleSections } from './Thimble/Thimble';
+import AudioSensorSupport, {
+  SECTIONS as AudioSensorSupportSections,
+} from './AudioSensorSupport/AudioSensorSupport';
 
 const PROJECTS = {
   'penny-deck-box': {
@@ -30,7 +31,8 @@ const PROJECTS = {
   'audio-sensor-support': {
     name: 'Audio Sensor Support',
     image: AudioSensorSupportImage,
-    details: [],
+    Component: AudioSensorSupport,
+    sections: AudioSensorSupportSections,
   },
   thimble: {
     name: 'The Thimble: Innovating Water Pipe Maintenance',
