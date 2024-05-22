@@ -1,5 +1,6 @@
 import React from 'react';
 
+/*
 import Section from '../Section';
 
 const SECTIONS = [
@@ -38,12 +39,13 @@ const SECTIONS = [
 - Human-Centered Design.`,
   },
 ];
+*/
 
 export default function About() {
   return (
     <>
       <h1>About</h1>
-      {SECTIONS.map((section) => <Section key={section.title} level={2} section={section} />)}
+      {/* SECTIONS.map((section) => <Section key={section.title} level={2} section={section} />) */}
     </>
   );
 }
