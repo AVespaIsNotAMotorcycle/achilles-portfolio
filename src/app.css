@@ -5,6 +5,8 @@ html {
 
   --max-width: 1000px;
 
+  --border-radius: 5px;
+
   font-family: helvetica, system-ui, sans-serif;
   font-size: 18px;
 
@@ -24,7 +26,7 @@ p {
   margin-bottom: 1rem;
 }
 
-img { border-radius: 5px; }
+img { border-radius: var(--border-radius); }
 h1, h2 {
   margin-top: 5rem;
   margin-bottom: 2rem;

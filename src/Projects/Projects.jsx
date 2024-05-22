@@ -12,15 +12,14 @@ import TableOfContents from '../TableOfContents';
 
 import './projects.css';
 
-// import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
-// import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
+import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
+import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
 import ThimbleImage from './Thimble/thimble.jpg';
 
-// import DeckBox from './DeckBox';
+import DeckBox from './DeckBox';
 import Thimble, { SECTIONS as ThimbleSections } from './Thimble/Thimble';
 
 const PROJECTS = {
-  /*
   'penny-deck-box': {
     name: 'The Penny Deck Box: An Open-Source Deck Box',
     image: PennyDeckBoxImage,
@@ -31,7 +30,6 @@ const PROJECTS = {
     image: AudioSensorSupportImage,
     details: [],
   },
-  */
   thimble: {
     name: 'The Thimble: Innovating Water Pipe Maintenance',
     image: ThimbleImage,
@@ -63,19 +61,19 @@ function ProjectsPage() {
   return (
     <>
       <h1>Projects</h1>
-      <div className="projects-list">
+      <ul className="projects-list">
         {Object.keys(PROJECTS).map((key) => {
           const { name, image } = PROJECTS[key];
           return (
-            <section key={key}>
+            <li key={key}>
               <Link to={key}>
-                <h2>{name}</h2>
                 <img alt="" src={image} />
+                <span>{name}</span>
               </Link>
-            </section>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </>
   );
 }
