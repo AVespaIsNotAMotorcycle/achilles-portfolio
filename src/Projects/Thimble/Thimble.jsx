@@ -8,11 +8,11 @@ import OPERATION_IMAGE from './thimble-operation.webp';
 import './thimble.css';
 
 export const SECTIONS = {
-  'our-purpose': ['Our Purpose', 'Preemptive Leak Detection'],
-  'how-it-works': ['How It Works', 'Thimble Subsystems'],
-  operation: ['Operation', 'Fire Hydrant Entry'],
-  testing: 'Thimble Testing',
-  'cad-models': 'CAD Models',
+  'our-purpose': { name: ['Our Purpose', 'Preemptive Leak Detection'] },
+  'how-it-works': { name: ['How It Works', 'Thimble Subsystems'] },
+  operation: { name: ['Operation', 'Fire Hydrant Entry'] },
+  testing: { name: 'Thimble Testing' },
+  'cad-models': { name: 'CAD Models' },
 };
 
 function Header({ children }) {
@@ -28,7 +28,7 @@ Header.propTypes = {
 function Section({ id, children }) {
   return (
     <section id={id}>
-      <Header>{SECTIONS[id]}</Header>
+      <Header>{SECTIONS[id].name}</Header>
       {children}
     </section>
   );

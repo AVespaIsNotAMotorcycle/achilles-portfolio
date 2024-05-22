@@ -16,14 +16,15 @@ import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
 import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
 import ThimbleImage from './Thimble/thimble.jpg';
 
-import DeckBox from './DeckBox';
+import DeckBox, { SECTIONS as DeckBoxSections } from './DeckBox/DeckBox';
 import Thimble, { SECTIONS as ThimbleSections } from './Thimble/Thimble';
 
 const PROJECTS = {
   'penny-deck-box': {
     name: 'The Penny Deck Box: An Open-Source Deck Box',
     image: PennyDeckBoxImage,
-    details: DeckBox,
+    Component: DeckBox,
+    sections: DeckBoxSections,
   },
   'audio-sensor-support': {
     name: 'Audio Sensor Support',
