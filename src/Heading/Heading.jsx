@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 
+import { LevelContext } from '../Section/levelContext';
 import './heading.css';
 
-export default function Heading({ children, level }) {
+export default function Heading({ children }) {
+  const level = useContext(LevelContext);
   const internals = Array.isArray(children)
     ? children.map((child) => <span key={child}>{child}</span>)
     : children;
@@ -19,6 +21,4 @@ export default function Heading({ children, level }) {
 }
 Heading.propTypes = {
   children: propTypes.node.isRequired,
-  level: propTypes.number,
 };
-Heading.defaultProps = { level: 2 };
