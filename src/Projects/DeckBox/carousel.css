@@ -1,0 +1,42 @@
+.carousel {
+  margin: 2rem 0;
+  --border-radius: 10px;
+  --border-width: 2px;
+}
+.carousel .image-wrapper {
+  height: 40vh;
+  border: 2px solid var(--color-neutral-dark);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.carousel .image-selector {
+  display: flex;
+  gap: 1rem;
+}
+.carousel .image-selector button {
+  flex-basis: 100%;
+  background-color: transparent;
+  padding: 2rem;
+  border: var(--border-width) solid transparent;
+  border-top: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  position: relative;
+}
+.carousel .image-selector button.selected,
+.carousel .image-selector button:focus,
+.carousel .image-selector button:hover {
+  border: var(--border-width) solid var(--color-neutral-dark);
+  border-top: none;
+  cursor: pointer;
+}
+.carousel .image-selector button.selected::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--border-width));
+  height: var(--border-width);
+  left: 0;
+  right: 0;
+  background: var(--color-neutral-light);
+}
