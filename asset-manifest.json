@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/achilles-portfolio/static/css/main.f79b4754.css",
-    "main.js": "/achilles-portfolio/static/js/main.1944274b.js",
+    "main.css": "/achilles-portfolio/static/css/main.3c8533ee.css",
+    "main.js": "/achilles-portfolio/static/js/main.02e92303.js",
     "static/js/453.60308f01.chunk.js": "/achilles-portfolio/static/js/453.60308f01.chunk.js",
+    "static/media/competitor-3.png": "/achilles-portfolio/static/media/competitor-3.ff099afd0045be88b7b1.png",
+    "static/media/competitor-2.png": "/achilles-portfolio/static/media/competitor-2.f7b7bfafb75d562e8ba4.png",
+    "static/media/competitor-1.png": "/achilles-portfolio/static/media/competitor-1.24274f1649c7db9f21a3.png",
+    "static/media/competitor-4.png": "/achilles-portfolio/static/media/competitor-4.68172c520f50368ed243.png",
+    "static/media/coffer-deck-box.jpg": "/achilles-portfolio/static/media/coffer-deck-box.546683d82745ebf6f45f.jpg",
     "static/media/thimble-operation.webp": "/achilles-portfolio/static/media/thimble-operation.d8bce1363a1bf6e7c898.webp",
+    "static/media/audio-sensor-support.jpg": "/achilles-portfolio/static/media/audio-sensor-support.449ef81138d83c57c321.jpg",
     "static/media/thimble-subsystems.webp": "/achilles-portfolio/static/media/thimble-subsystems.ff31568c40c1c77b0aee.webp",
     "static/media/thimble.jpg": "/achilles-portfolio/static/media/thimble.a4de0b9f2cefcfb445ec.jpg",
     "static/media/thimble-purpose.webp": "/achilles-portfolio/static/media/thimble-purpose.697dab28008e4219acba.webp",
     "index.html": "/achilles-portfolio/index.html",
-    "main.f79b4754.css.map": "/achilles-portfolio/static/css/main.f79b4754.css.map",
-    "main.1944274b.js.map": "/achilles-portfolio/static/js/main.1944274b.js.map",
+    "main.3c8533ee.css.map": "/achilles-portfolio/static/css/main.3c8533ee.css.map",
+    "main.02e92303.js.map": "/achilles-portfolio/static/js/main.02e92303.js.map",
     "453.60308f01.chunk.js.map": "/achilles-portfolio/static/js/453.60308f01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f79b4754.css",
-    "static/js/main.1944274b.js"
+    "static/css/main.3c8533ee.css",
+    "static/js/main.02e92303.js"
   ]
 }
