@@ -5,7 +5,7 @@ import { LevelContext } from '../Section/levelContext';
 import './heading.css';
 
 export default function Heading({ children }) {
-  const level = useContext(LevelContext);
+  const { level } = useContext(LevelContext);
   const internals = Array.isArray(children)
     ? children.map((child) => <span key={child}>{child}</span>)
     : children;

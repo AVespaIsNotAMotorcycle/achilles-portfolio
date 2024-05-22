@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Section from '../../Section';
+
 export const SECTIONS = {
   research: { name: 'Research' },
   ideation: { name: 'Ideation' },
@@ -16,7 +18,12 @@ export const SECTIONS = {
 export default function DeckBox() {
   return (
     <div className="deck-box">
-      Lorem ipsum dolor sit amet.
+      <Section id="prototyping">
+        Lorem ipsum dolor sit amet.
+        <Section id="manila-paper">
+          Lorem ipsum dolor sit amet.
+        </Section>
+      </Section>
     </div>
   );
 }

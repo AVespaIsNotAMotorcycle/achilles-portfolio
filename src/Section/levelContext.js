@@ -1,3 +1,7 @@
 import { createContext } from 'react';
 
-export const LevelContext = createContext(2); // eslint-disable-line
+const LevelContext = createContext({
+  level: 2,
+  lineage: [],
+});
+export { LevelContext }; // eslint-disable-line
