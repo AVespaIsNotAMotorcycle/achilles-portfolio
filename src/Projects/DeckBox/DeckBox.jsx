@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 import Section from '../../Section';
 
-import './carousel.css';
+import './accordion.css';
 
 import COMPETITOR_BOX_ONE from './research/competitor-1.png';
 import COMPETITOR_BOX_TWO from './research/competitor-2.png';
@@ -31,29 +31,21 @@ export const SECTIONS = {
   },
 };
 
-function Carousel({ images }) {
+function Accordion({ images }) {
   const [selected, setSelected] = useState(0);
-  const { source, alt } = images[selected];
   return (
-    <div className="carousel">
-      <div className="image-wrapper">
-        <img src={source} alt={alt} />
-      </div>
-      <div className="image-selector">
-        {images.map((image, index) => (
-          <button
-            type="button"
-            onClick={() => { setSelected(index); }}
-            className={index === selected ? 'selected' : ''}
-          >
-            <img src={image.source} alt={image.alt} />
+    <ol className="accordion">
+      {images.map(({ source, alt }, index) => (
+        <li key={source} className={index === selected ? 'selected' : ''}>
+          <button type="button" onClick={() => { setSelected(index); }}>
+            <img src={source} alt={alt} />
           </button>
-        ))}
-      </div>
-    </div>
+        </li>
+      ))}
+    </ol>
   );
 }
-Carousel.propTypes = {
+Accordion.propTypes = {
   images: propTypes.arrayOf(propTypes.shape({
     source: propTypes.string,
     alt: propTypes.string,
@@ -66,7 +58,7 @@ export default function DeckBox() {
       <Section id="research" level={2}>
         High quality boxes can be cost prohibitive for low income Magic The Gathering players.
         More affordable boxes often sacrifice user-experience and security of the cards.
-        <Carousel
+        <Accordion
           images={[
             { source: COMPETITOR_BOX_ONE, alt: '' },
             { source: COMPETITOR_BOX_TWO, alt: '' },
