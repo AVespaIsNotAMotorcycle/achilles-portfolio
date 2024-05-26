@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BrowserRouter,
   Outlet,
-  Navigate,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -13,12 +12,13 @@ import './app.css';
 import Header from './Header';
 import Footer from './Footer';
 
+import Page404 from './404';
 import Projects from './Projects';
 import About from './About';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
         <Route
           path=""
@@ -32,7 +32,7 @@ function App() {
             </>
           )}
         >
-          <Route index element={<Navigate to="/projects" />} />
+          <Route path="*" element={<Page404 />} />
           <Route path="projects/*" element={<Projects />} />
           <Route path="about" element={<About />} />
         </Route>
