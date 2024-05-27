@@ -15,7 +15,7 @@
 }
 .thimble #how-it-works ol {
   list-style-type: none;
-  padding: 0;
+  padding: 0.5rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -29,6 +29,7 @@
   flex-grow: 1;
 }
 .thimble #how-it-works li h3 {
+  border-radius: 0;
   border-bottom: 2px solid var(--color-neutral-dark);
   margin-bottom: 1rem;
 }
