@@ -59,6 +59,10 @@ button:not(.icon) {
   display: flex;
   padding: 1rem;
 }
+button:not(.icon) svg,
+button:not(.icon) img {
+  margin-right: 1rem;
+}
 
 a:has(button) {
   text-decoration: none;
