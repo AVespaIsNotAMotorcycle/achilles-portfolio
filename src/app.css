@@ -68,3 +68,11 @@ a:has(button) {
   text-decoration: none;
   color: inherit;
 }
+a {
+  color: inherit;
+}
+p a {
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+a:hover, a:focus { color: var(--color-brand); }
