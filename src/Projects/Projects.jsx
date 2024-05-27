@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import TableOfContents from '../TableOfContents';
+import Page404 from '../404';
 
 import './projects.css';
 import { ProjectContext } from './ProjectContext';
@@ -44,6 +45,7 @@ const PROJECTS = {
 
 function ProjectPage() {
   const { projectName } = useParams();
+  if (!PROJECTS[projectName]) return <Page404 />;
   const {
     name,
     image,
