@@ -35,6 +35,7 @@ export default function Video({ source }) {
         onPause={() => { setPlaying(false); }}
         onPlay={() => { setPlaying(true); }}
         onTimeUpdate={() => { setProgress(calculateProgress()); }}
+        onClick={playing ? pause : play}
       />
       <controls>
         <button type="button" onClick={playing ? pause : play}>
