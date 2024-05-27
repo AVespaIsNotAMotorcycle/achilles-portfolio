@@ -1,0 +1,37 @@
+aside.quote {
+  outline: 2px solid var(--color-brand);
+  padding: 1rem;
+  display: flex;  
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+aside.quote span {
+  display: block;
+}
+aside.quote .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+aside.quote q {
+  font-style: italic;
+  font-size: 1.25rem;
+}
+aside.quote .name,
+aside.quote .context {
+  text-align: right;
+}
+aside.quote .name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+aside.quote .context { font-size: 1rem; }
+aside.quote img {
+  max-width: 10rem;
+  aspect-ratio: 1 / 1;
+}
+
+@media(max-width: 787px) {
+  aside.quote img { display: none; }
+}

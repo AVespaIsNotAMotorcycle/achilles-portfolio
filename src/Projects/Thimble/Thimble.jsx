@@ -3,6 +3,7 @@ import React from 'react';
 import Section from '../../Section';
 import Video from '../../Video';
 import Accordion from '../../Accordion';
+import Quote from '../../Quote';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
@@ -15,6 +16,8 @@ import INITIAL_CAD_IMAGE from './Initial CAD.png';
 import INITIAL_CAD_INTERNAL_IMAGE from './Initial CAD Internal.png';
 import MIDDLE_STAGE_CAD_IMAGE from './Middle Stage Full CAD.jpg';
 import FULL_ASSEMBLY_CAD_IMAGE from './Full Assembly CAD.png';
+
+import THOMAS_WYNNE_IMAGE from './thomas-wynne.jpg';
 
 import './thimble.css';
 
@@ -29,6 +32,13 @@ export const SECTIONS = {
 export default function Thimble() {
   return (
     <div className="thimble">
+      <Quote
+        quote={`If you guys develop that, then let me know and I’ll buy some stock and invest
+                in your company!`}
+        name="Thomas Wynne"
+        context="Infrastructure Deputy Commissioner NYC Department of Design and Construction"
+        imageSource={THOMAS_WYNNE_IMAGE}
+      />
       <Section id="our-purpose">
         <div className="grid">
           <img
