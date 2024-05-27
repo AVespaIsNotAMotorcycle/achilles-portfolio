@@ -20,10 +20,7 @@
 }
 
 .video-wrapper controls button {
-  border-radius: var(--border-radius);
   position: relative;
-  background: var(--color-neutral-light);
-  color: var(--color-brand);
   border: none;
   display: flex;
 }

@@ -14,6 +14,8 @@ html {
   color: var(--color-neutral-dark);
 }
 
+* { border-radius: var(--border-radius); }
+
 header > div,
 main,
 footer > div {
@@ -28,7 +30,6 @@ p {
 
 img, video {
   margin: 0.5rem 0;
-  border-radius: var(--border-radius);
 }
 h1, h2 {
   margin-top: 5rem;
@@ -37,4 +38,17 @@ h1, h2 {
 h3, h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+button {
+  background-color: var(--color-neutral-light);
+  color: var(--color-brand);
+  transition-property: background-color color;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+button:focus-visible,
+button:hover {
+  background-color: var(--color-brand);
+  color: var(--color-neutral-light);
 }
