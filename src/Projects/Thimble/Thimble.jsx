@@ -1,10 +1,14 @@
 import React from 'react';
 
 import Section from '../../Section';
+import Video from '../../Video';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
 import OPERATION_IMAGE from './thimble-operation.webp';
+
+import INSERTING_THIMBLE_VIDEO from './Usability Prototype - Inserting Thimble.mp4';
+import USABILITY_PROTOYPE_SCREEN_VIDEO from './Usability Prototype with Screen.mp4';
 
 import './thimble.css';
 
@@ -109,6 +113,8 @@ export default function Thimble() {
           gaskets, and cable glands, and has been verified through submergence tests. When swabbed
           with a paper towel, the interior chamber comes out completely dry.`}
         </p>
+        <Video source={INSERTING_THIMBLE_VIDEO} />
+        <Video source={USABILITY_PROTOYPE_SCREEN_VIDEO} />
       </Section>
       <Section id="cad-models">
         <p>
