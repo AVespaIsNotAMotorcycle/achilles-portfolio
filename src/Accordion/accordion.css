@@ -78,6 +78,8 @@
 .accordion button:focus,
 .accordion button:hover {
   outline-width: 5px;
+  outline-color: var(--color-brand);
+  border-color: var(--color-brand);
 }
 
 .accordion button img {
