@@ -12,7 +12,9 @@ export default function Quote({
   return (
     <aside className="quote">
       <div className="text">
-        <q>{quote}</q>
+        <div>
+          <q>{quote}</q>
+        </div>
         <div>
           <span className="name">{name}</span>
           {context && <span className="context">{context}</span>}

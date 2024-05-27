@@ -14,9 +14,14 @@ aside.quote .text {
   justify-content: space-between;
   gap: 1rem;
 }
-aside.quote q {
+aside.quote .text > div:first-child {
   font-style: italic;
   font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
 }
 aside.quote .name,
 aside.quote .context {

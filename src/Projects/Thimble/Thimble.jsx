@@ -18,6 +18,7 @@ import MIDDLE_STAGE_CAD_IMAGE from './Middle Stage Full CAD.jpg';
 import FULL_ASSEMBLY_CAD_IMAGE from './Full Assembly CAD.png';
 
 import THOMAS_WYNNE_IMAGE from './thomas-wynne.jpg';
+import DOUG_GREELEY_IMAGE from './doug-greeley.png';
 
 import './thimble.css';
 
@@ -147,6 +148,13 @@ export default function Thimble() {
           ]}
         />
       </Section>
+      <Quote
+        quote="I'm enthused!"
+        name="Doug Greeley"
+        context={`Former Deputy Commissioner of the Bureau of Water and Sewer Operations Doug Greeley,
+                  NYC Department of Environmental Protection`}
+        imageSource={DOUG_GREELEY_IMAGE}
+      />
     </div>
   );
 }
