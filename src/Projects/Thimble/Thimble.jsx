@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../../Section';
 import Video from '../../Video';
+import Accordion from '../../Accordion';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
@@ -9,6 +10,11 @@ import OPERATION_IMAGE from './thimble-operation.webp';
 
 import INSERTING_THIMBLE_VIDEO from './Usability Prototype - Inserting Thimble.mp4';
 import USABILITY_PROTOYPE_SCREEN_VIDEO from './Usability Prototype with Screen.mp4';
+
+import INITIAL_CAD_IMAGE from './Initial CAD.png';
+import INITIAL_CAD_INTERNAL_IMAGE from './Initial CAD Internal.png';
+import MIDDLE_STAGE_CAD_IMAGE from './Middle Stage Full CAD.jpg';
+import FULL_ASSEMBLY_CAD_IMAGE from './Full Assembly CAD.png';
 
 import './thimble.css';
 
@@ -122,6 +128,14 @@ export default function Thimble() {
           renderings show both the 3D-printed frames designed using Solidworks, and assemblies
           featuring all other integrated components.`}
         </p>
+        <Accordion
+          images={[
+            { source: INITIAL_CAD_IMAGE, alt: '' },
+            { source: INITIAL_CAD_INTERNAL_IMAGE, alt: '' },
+            { source: MIDDLE_STAGE_CAD_IMAGE, alt: '' },
+            { source: FULL_ASSEMBLY_CAD_IMAGE, alt: '' },
+          ]}
+        />
       </Section>
     </div>
   );

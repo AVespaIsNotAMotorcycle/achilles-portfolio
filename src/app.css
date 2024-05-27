@@ -42,13 +42,25 @@ h3, h4 {
 
 button {
   background-color: var(--color-neutral-light);
-  color: var(--color-brand);
+  color: var(--color-dark);
   transition-property: background-color color;
   transition-duration: 0.2s;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 button:focus-visible,
 button:hover {
   background-color: var(--color-brand);
   color: var(--color-neutral-light);
+}
+
+button:not(.icon) {
+  display: flex;
+  padding: 1rem;
+}
+
+a:has(button) {
+  text-decoration: none;
+  color: inherit;
 }

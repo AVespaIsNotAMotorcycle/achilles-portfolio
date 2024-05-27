@@ -38,7 +38,7 @@ export default function Video({ source }) {
         onClick={playing ? pause : play}
       />
       <controls>
-        <button type="button" onClick={playing ? pause : play}>
+        <button className="icon" type="button" onClick={playing ? pause : play}>
           {playing ? <PauseIcon /> : <PlayArrowIcon />}
         </button>
         <label style={{ '--value': `${progress}%` }} htmlFor={`${source}-time`} className="time-bar">
@@ -52,7 +52,11 @@ export default function Video({ source }) {
             onChange={changeTime}
           />
         </label>
-        <button type="button" onClick={fullscreen ? enterFullscreen : exitFullscreen}>
+        <button
+          className="icon"
+          type="button"
+          onClick={fullscreen ? enterFullscreen : exitFullscreen}
+        >
           {fullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
         </button>
       </controls>

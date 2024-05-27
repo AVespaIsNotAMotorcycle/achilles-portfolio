@@ -39,3 +39,10 @@
   border-color: var(--color-brand);
   outline-width: 5px;
 }
+
+.image-and-links { position: relative; }
+.file-download-links {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}

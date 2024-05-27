@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
+import propTypes from 'prop-types';
 import {
   Routes,
   Route,
   Link,
   useParams,
 } from 'react-router-dom';
+import DownloadIcon from '@mui/icons-material/Download';
 
 import TableOfContents from '../TableOfContents';
 import Page404 from '../404';
@@ -15,6 +17,8 @@ import { ProjectContext } from './ProjectContext';
 import PennyDeckBoxImage from './DeckBox/coffer-deck-box.jpg';
 import AudioSensorSupportImage from './AudioSensorSupport/audio-sensor-support.jpg';
 import ThimbleImage from './Thimble/thimble.jpg';
+
+import ThimbleReport from './Thimble/thimble_report.pdf';
 
 import DeckBox, { SECTIONS as DeckBoxSections } from './DeckBox/DeckBox';
 import Thimble, { SECTIONS as ThimbleSections } from './Thimble/Thimble';
@@ -40,8 +44,29 @@ const PROJECTS = {
     image: ThimbleImage,
     Component: Thimble,
     sections: ThimbleSections,
+    files: {
+      Report: ThimbleReport,
+    },
   },
 };
+
+function FileDownloadLinks({ files }) {
+  if (!files) return null;
+  return (
+    <div className="file-download-links">
+      {Object.keys(files).map((key) => (
+        <a href={files[key]}>
+          <button type="button" key={key}>
+            <DownloadIcon />
+            {`Download ${key}`}
+          </button>
+        </a>
+      ))}
+    </div>
+  );
+}
+FileDownloadLinks.propTypes = { files: propTypes.instanceOf(Object) };
+FileDownloadLinks.defaultProps = { files: undefined };
 
 function ProjectPage() {
   const { projectName } = useParams();
@@ -51,13 +76,17 @@ function ProjectPage() {
     image,
     sections,
     Component,
+    files,
   } = PROJECTS[projectName];
   const value = useMemo(() => ({ name, sections }), [projectName]);
   return (
     <ProjectContext.Provider value={value}>
       <h1>{name}</h1>
       <TableOfContents sections={sections} />
-      <img alt="" src={image} />
+      <div className="image-and-links">
+        <img alt="" src={image} />
+        <FileDownloadLinks files={files} />
+      </div>
       <Component />
       {/* details.map((section) => <Section key={section.title} section={section} level={2} />) */}
     </ProjectContext.Provider>
