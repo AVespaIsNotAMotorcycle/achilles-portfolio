@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '../../Section';
 import Video from '../../Video';
-import Accordion from '../../Accordion';
+import Carousel from '../../Carousel';
 import Quote from '../../Quote';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
@@ -139,7 +139,7 @@ export default function Thimble() {
           renderings show both the 3D-printed frames designed using Solidworks, and assemblies
           featuring all other integrated components.`}
         </p>
-        <Accordion
+        <Carousel
           images={[
             { source: INITIAL_CAD_IMAGE, alt: '' },
             { source: INITIAL_CAD_INTERNAL_IMAGE, alt: '' },
