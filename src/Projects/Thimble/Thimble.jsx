@@ -7,7 +7,6 @@ import Quote from '../../Quote';
 
 import PURPOSE_IMAGE from './thimble-purpose.webp';
 import SUBSYSTEMS_IMAGE from './thimble-subsystems.webp';
-import OPERATION_IMAGE from './thimble-operation.webp';
 
 import INSERTING_THIMBLE_VIDEO from './Usability Prototype - Inserting Thimble.mp4';
 import USABILITY_PROTOYPE_SCREEN_VIDEO from './Usability Prototype with Screen.mp4';
@@ -99,22 +98,19 @@ export default function Thimble() {
         </div>
       </Section>
       <Section id="operation">
-        <img
-          src={OPERATION_IMAGE}
-          alt={`A screen is placed before a cardboard imitation of a fire hydrant.
-              On screen is a video feed from the Thimble, as well as various measurements.`}
-        />
         <p>
           {`The Thimble can enter the city's water mains through any street-level fire hydrant.
           The operator, a DEP employee, removes the hydrant's top cap and screws the thimble's
           spool on in its place.`}
         </p>
+        <Video source={INSERTING_THIMBLE_VIDEO} />
         <p>
           {`The Thimble then detaches from its spool and drops down through the hydrant. It enters
           first into the adjoining branch valve, and then deeper into the water main network.
           All the while, it reports a live video feed using its camera for operators to analyze
           and search for defects.`}
         </p>
+        <Video source={USABILITY_PROTOYPE_SCREEN_VIDEO} />
         <p>
           {`When the Thimble's journey is over, it can be recalled by re-spooling its tether. The
           tether always remains attached to both the Thimble and the hydrant cap, allowing the
@@ -130,8 +126,6 @@ export default function Thimble() {
           gaskets, and cable glands, and has been verified through submergence tests. When swabbed
           with a paper towel, the interior chamber comes out completely dry.`}
         </p>
-        <Video source={INSERTING_THIMBLE_VIDEO} />
-        <Video source={USABILITY_PROTOYPE_SCREEN_VIDEO} />
       </Section>
       <Section id="cad-models">
         <p>
