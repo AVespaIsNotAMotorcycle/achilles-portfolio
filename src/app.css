@@ -55,13 +55,14 @@ button:hover {
   color: var(--color-neutral-light);
 }
 
+button.icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 button:not(.icon) {
   display: flex;
   padding: 1rem;
-}
-button:not(.icon) svg,
-button:not(.icon) img {
-  margin-right: 1rem;
 }
 
 a:has(button) {
