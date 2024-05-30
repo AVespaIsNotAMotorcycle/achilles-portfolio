@@ -1,7 +1,9 @@
 import React from 'react';
 
 import Section from '../../Section';
-import Accordion from '../../Accordion';
+import Image from '../../Image';
+
+import './deckBox.css';
 
 import COMPETITOR_BOX_ONE from './research/competitor-1.png';
 import COMPETITOR_BOX_TWO from './research/competitor-2.png';
@@ -35,14 +37,12 @@ export default function DeckBox() {
       <Section id="research" level={2}>
         High quality boxes can be cost prohibitive for low income Magic The Gathering players.
         More affordable boxes often sacrifice user-experience and security of the cards.
-        <Accordion
-          images={[
-            { source: COMPETITOR_BOX_ONE, alt: '' },
-            { source: COMPETITOR_BOX_TWO, alt: '' },
-            { source: COMPETITOR_BOX_THREE, alt: '' },
-            { source: COMPETITOR_BOX_FOUR, alt: '' },
-          ]}
-        />
+        <div className="gallery">
+          <Image source={COMPETITOR_BOX_ONE} alt="" />
+          <Image source={COMPETITOR_BOX_TWO} alt="" />
+          <Image source={COMPETITOR_BOX_THREE} alt="" />
+          <Image source={COMPETITOR_BOX_FOUR} alt="" />
+        </div>
         <Section id="design-challenge" level={3}>
           Design a deck box for magic the gathering which is affordable and accessible without
           sacrificing features found in expensive boxes.

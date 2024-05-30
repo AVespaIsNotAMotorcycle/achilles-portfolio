@@ -1,0 +1,12 @@
+.deck-box #research .gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.deck-box #research .gallery button > img {
+  min-width: 0;
+  width: auto;
+  height: auto;
+  max-height: 15rem;
+}
