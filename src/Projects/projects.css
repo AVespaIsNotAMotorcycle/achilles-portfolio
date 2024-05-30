@@ -46,3 +46,5 @@
   right: 1rem;
   bottom: 1rem;
 }
+.file-download-links button svg,
+.file-download-links button img { margin-right: 1rem; }
