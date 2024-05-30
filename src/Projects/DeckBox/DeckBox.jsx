@@ -5,10 +5,23 @@ import Image from '../../Image';
 
 import './deckBox.css';
 
+// ==== RESEARCH ====
 import COMPETITOR_BOX_ONE from './research/competitor-1.png';
 import COMPETITOR_BOX_TWO from './research/competitor-2.png';
 import COMPETITOR_BOX_THREE from './research/competitor-3.png';
 import COMPETITOR_BOX_FOUR from './research/competitor-4.png';
+
+import TOLARIAN_THUMBNAIL from './research/tolarian-thumbnail.png';
+import TOLARIAN_LOGO from './research/tolarian-logo.png';
+
+import WOODEN_BOX from './research/wooden-box.png';
+import PHYREXIAN_BOX from './research/phyrexian-box.png';
+import ULTIMATE_GUARD_BOX from './research/ultimate-guard-box.png';
+
+// ==== IDEATION ====
+import SKETCHES_ONE from './ideation/sketches-1.jpg';
+import SKETCHES_THREE from './ideation/sketches-3.jpg';
+import SKETCHES_FIVE from './ideation/sketches-5.jpg';
 
 export const SECTIONS = {
   research: {
@@ -48,9 +61,18 @@ export default function DeckBox() {
           sacrificing features found in expensive boxes.
         </Section>
         <Section id="existing-solutions" level={3}>
+          <div className="gallery two">
+            <img src={TOLARIAN_THUMBNAIL} alt="" />
+            <img src={TOLARIAN_LOGO} alt="" />
+          </div>
           Tolarian Community College is a highly respected Deck Box reviewer in the Magic
           community, so for this project all 40+ of their videos were used to understand Magic
           player’s needs and existing solutions.
+          <div className="gallery three">
+            <img src={WOODEN_BOX} alt="" />
+            <img src={PHYREXIAN_BOX} alt="" />
+            <img src={ULTIMATE_GUARD_BOX} alt="" />
+          </div>
         </Section>
         <Section id="major-takeaways" level={3}>
           <ul>
@@ -69,7 +91,11 @@ export default function DeckBox() {
           user experience while minimizing cost.
         </Section>
       </Section>
-      <Section id="ideation" level={2} />
+      <Section id="ideation" level={2}>
+        <Image source={SKETCHES_ONE} alt="" />
+        <Image source={SKETCHES_THREE} alt="" />
+        <Image source={SKETCHES_FIVE} alt="" />
+      </Section>
       <Section id="prototyping" level={2}>
         Lorem ipsum dolor sit amet.
         <Section id="manila-paper" level={3}>

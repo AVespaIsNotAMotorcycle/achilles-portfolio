@@ -1,4 +1,4 @@
-.deck-box #research .gallery {
+.deck-box #research > .gallery {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -9,4 +9,14 @@
   width: auto;
   height: auto;
   max-height: 15rem;
+}
+.deck-box #research #existing-solutions .gallery {
+  display: grid;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+.deck-box #research #existing-solutions .gallery.two { grid-template-columns: 1fr 1fr; }
+.deck-box #research #existing-solutions .gallery.three { grid-template-columns: 1fr 1fr 1fr; }
+.deck-box #research #existing-solutions .gallery img {
+  width: 100%;
 }
