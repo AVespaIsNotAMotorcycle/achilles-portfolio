@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Markdown from 'react-markdown';
 
+import HEADSHOT from './headshot.jpeg';
+import './about.css';
+
 const markdown = `
 ## Experience
 ### Columbia Physics Lab Course Assistant
@@ -28,19 +31,22 @@ const markdown = `
 
 export default function About() {
   return (
-    <>
+    <div className="about">
       <h1>About</h1>
-      <p>
-        Achilles is a product engineer committed to human centered design. He seeks to
-        improve his design skills with socially impactful projects like
-        {' '}
-        <Link to="/projects/thimble/tst">the Thimble.</Link>
-        {' '}
-        He is a graduate of Columbia University with a B.S. in mechanical engineering and has
-        worked with various educational spaces at Columbia to design and develop educational
-        devices with them.
-      </p>
+      <div>
+        <img src={HEADSHOT} alt="headshot" />
+        <p>
+          Achilles is a product engineer committed to human centered design. He seeks to
+          improve his design skills with socially impactful projects like
+          {' '}
+          <Link to="/projects/thimble/tst">the Thimble.</Link>
+          {' '}
+          He is a graduate of Columbia University with a B.S. in mechanical engineering and has
+          worked with various educational spaces at Columbia to design and develop educational
+          devices with them.
+        </p>
+      </div>
       <Markdown>{markdown}</Markdown>
-    </>
+    </div>
   );
 }

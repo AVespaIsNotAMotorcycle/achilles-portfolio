@@ -1,0 +1,14 @@
+.about img {
+  border-radius: 50%;
+  max-width: 15rem;
+  margin: auto;
+}
+
+@media (min-width: 787px) {
+  .about h1 + div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .about img { margin-left: 10rem; }
+}
