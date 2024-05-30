@@ -1,0 +1,32 @@
+.image {
+  width: fit-content;
+}
+
+.image button { padding: 0; }
+.image button > * { margin: 0; }
+.image button:focus,
+.image button:hover {
+  outline: 5px solid var(--color-brand);
+}
+
+dialog {
+  margin: auto;
+  border: none;
+}
+dialog img {
+  max-width: 90svw;
+  max-height: 90svh;
+}
+dialog::backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+dialog button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+dialog button span {
+  position: absolute;
+  visibility: hidden;
+}
