@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.deck-box #research .gallery button > img {
+.deck-box #research .gallery button img {
   min-width: 0;
   width: auto;
   height: auto;
@@ -20,6 +20,8 @@
 .deck-box #research #existing-solutions .gallery img {
   width: 100%;
 }
+
+.deck-box #ideation .image { margin-top: 1rem; }
 
 .deck-box #manila-paper ol {
   padding: 0;
@@ -51,4 +53,32 @@
 .deck-box #manila-paper ol ul {
   padding-left: 0;
   list-style-position: inside;
+}
+
+.deck-box #cardboard > div {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.deck-box #CAD > div {
+  border-radius: 0;
+  margin: 1rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-brand);
+}
+.deck-box #CAD h4 {
+  display: block;
+  width: fit-content;
+  border-radius: 0;
+  border-bottom: 2px solid var(--color-neutral-dark);
+  margin-bottom: 1rem;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+.deck-box #CAD > div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }

@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import './image.css';
 
-export default function Image({ source, alt }) {
+export default function Image({ source, alt, caption }) {
   const dialogRef = useRef(null);
 
   const open = () => { dialogRef.current.showModal(); };
@@ -14,10 +14,16 @@ export default function Image({ source, alt }) {
   return (
     <div className="image">
       <button type="button" onClick={open}>
-        <img src={source} alt={alt} />
+        <figure>
+          <img src={source} alt={alt} />
+          {caption && <figcaption>{caption}</figcaption>}
+        </figure>
       </button>
       <dialog ref={dialogRef}>
-        <img src={source} alt={alt} />
+        <figure>
+          <img src={source} alt={alt} />
+          {caption && <figcaption>{caption}</figcaption>}
+        </figure>
         <form onSubmit={close}>
           <button type="submit" className="icon">
             <span>Close</span>
@@ -31,4 +37,6 @@ export default function Image({ source, alt }) {
 Image.propTypes = {
   source: propTypes.string.isRequired,
   alt: propTypes.string.isRequired,
+  caption: propTypes.string,
 };
+Image.defaultProps = { caption: '' };

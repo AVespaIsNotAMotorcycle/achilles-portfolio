@@ -26,13 +26,22 @@ import SKETCHES_ONE from './ideation/sketches-1.jpg';
 import SKETCHES_THREE from './ideation/sketches-3.jpg';
 import SKETCHES_FIVE from './ideation/sketches-5.jpg';
 
-// ==== MANILA ===
+// ==== PROTOTYPING ===
 import MANILA_1 from './prototyping/manila/1.jpg';
 import MANILA_2 from './prototyping/manila/2.jpg';
 import MANILA_3 from './prototyping/manila/3.jpg';
 import MANILA_4 from './prototyping/manila/4.jpg';
 import MANILA_5 from './prototyping/manila/5.jpg';
 import MANILA_6 from './prototyping/manila/6.jpg';
+
+import CARDBOARD_1 from './prototyping/cardboard/1.jpg';
+import CARDBOARD_2 from './prototyping/cardboard/2.jpg';
+import CARDBOARD_3 from './prototyping/cardboard/3.jpg';
+
+import CAD_1 from './prototyping/cad/1.png';
+import CAD_2 from './prototyping/cad/2.png';
+import CAD_3 from './prototyping/cad/3.jpg';
+import CAD_4 from './prototyping/cad/4.jpg';
 
 export const SECTIONS = {
   research: {
@@ -150,10 +159,27 @@ export default function DeckBox() {
           </ol>
         </Section>
         <Section id="cardboard" level={3}>
-          Lorem ipsum dolor sit amet.
+          <div>
+            <Image source={CARDBOARD_1} alt="" caption="Only one of the rails offers support" />
+            <Image source={CARDBOARD_2} alt="" caption="Walls are too short" />
+            <Image source={CARDBOARD_3} alt="" caption="Poor tolerances on the dieline" />
+          </div>
         </Section>
         <Section id="CAD" level={3}>
-          Lorem ipsum dolor sit amet.
+          <div>
+            <h4>CAD of the dieline using solidworks sheet metal feature</h4>
+            <div>
+              <Image source={CAD_1} alt="" />
+              <Image source={CAD_2} alt="" />
+            </div>
+          </div>
+          <div>
+            <h4>Renderings of the Box with adjustments</h4>
+            <div>
+              <Image source={CAD_3} alt="" />
+              <Image source={CAD_4} alt="" />
+            </div>
+          </div>
         </Section>
       </Section>
     </div>
