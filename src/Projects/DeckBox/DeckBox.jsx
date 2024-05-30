@@ -1,5 +1,8 @@
 import React from 'react';
 
+import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
+
 import Section from '../../Section';
 import Image from '../../Image';
 
@@ -22,6 +25,14 @@ import ULTIMATE_GUARD_BOX from './research/ultimate-guard-box.png';
 import SKETCHES_ONE from './ideation/sketches-1.jpg';
 import SKETCHES_THREE from './ideation/sketches-3.jpg';
 import SKETCHES_FIVE from './ideation/sketches-5.jpg';
+
+// ==== MANILA ===
+import MANILA_1 from './prototyping/manila/1.jpg';
+import MANILA_2 from './prototyping/manila/2.jpg';
+import MANILA_3 from './prototyping/manila/3.jpg';
+import MANILA_4 from './prototyping/manila/4.jpg';
+import MANILA_5 from './prototyping/manila/5.jpg';
+import MANILA_6 from './prototyping/manila/6.jpg';
 
 export const SECTIONS = {
   research: {
@@ -97,9 +108,46 @@ export default function DeckBox() {
         <Image source={SKETCHES_FIVE} alt="" />
       </Section>
       <Section id="prototyping" level={2}>
-        Lorem ipsum dolor sit amet.
         <Section id="manila-paper" level={3}>
-          Lorem ipsum dolor sit amet.
+          <ol>
+            <li>
+              <div>
+                <h4>
+                  <ClearIcon />
+                  Sides as the Lid
+                </h4>
+                Could not securely fit the cards
+              </div>
+              <Image source={MANILA_1} alt="" />
+              <Image source={MANILA_2} alt="" />
+            </li>
+            <li>
+              <div>
+                <h4>
+                  <ClearIcon />
+                  Hinge with Side Flaps
+                </h4>
+                Required too much continuous material
+              </div>
+              <Image source={MANILA_3} alt="" />
+              <Image source={MANILA_4} alt="" />
+            </li>
+            <li>
+              <div>
+                <h4>
+                  <CheckIcon />
+                  Sliding Rail Design
+                </h4>
+                <ul>
+                  <li>Keeps cards secure</li>
+                  <li>Materially efficient</li>
+                  <li>Mechanically simple</li>
+                </ul>
+              </div>
+              <Image source={MANILA_5} alt="" />
+              <Image source={MANILA_6} alt="" />
+            </li>
+          </ol>
         </Section>
         <Section id="cardboard" level={3}>
           Lorem ipsum dolor sit amet.
