@@ -26,6 +26,7 @@ import AudioSensorSupport, {
   SECTIONS as AudioSensorSupportSections,
 } from './AudioSensorSupport/AudioSensorSupport';
 
+/* eslint no-unused-vars: warn */
 const PROJECTS = {
   'penny-deck-box': {
     name: 'The Penny Deck Box: An Open-Source Deck Box',
@@ -33,12 +34,14 @@ const PROJECTS = {
     Component: DeckBox,
     sections: DeckBoxSections,
   },
+  /*
   'audio-sensor-support': {
     name: 'Audio Sensor Support',
     image: AudioSensorSupportImage,
     Component: AudioSensorSupport,
     sections: AudioSensorSupportSections,
   },
+  */
   thimble: {
     name: 'The Thimble: Innovating Water Pipe Maintenance',
     image: ThimbleImage,
