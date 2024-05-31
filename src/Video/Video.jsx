@@ -10,6 +10,8 @@ import './video.css';
 
 /* eslint jsx-a11y/media-has-caption: warn */
 export default function Video({ source }) {
+  if (true) return <video src={source} controls />;
+
   const [playing, setPlaying] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -36,6 +38,7 @@ export default function Video({ source }) {
         onPlay={() => { setPlaying(true); }}
         onTimeUpdate={() => { setProgress(calculateProgress()); }}
         onClick={playing ? pause : play}
+        controls
       />
       <controls>
         <button className="icon" type="button" onClick={playing ? pause : play}>
