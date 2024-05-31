@@ -39,7 +39,7 @@ export default function About() {
           Achilles is a product engineer committed to human centered design. He seeks to
           improve his design skills with socially impactful projects like
           {' '}
-          <Link to="/projects/thimble/tst">the Thimble.</Link>
+          <Link to="/projects/thimble">the Thimble.</Link>
           {' '}
           He is a graduate of Columbia University with a B.S. in mechanical engineering and has
           worked with various educational spaces at Columbia to design and develop educational
