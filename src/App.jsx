@@ -1,10 +1,12 @@
 import React from 'react';
 import {
-  BrowserRouter,
+  createBrowserRouter,
+  createRoutesFromElements,
   Navigate,
   Outlet,
-  Routes,
   Route,
+  RouterProvider,
+  ScrollRestoration,
 } from 'react-router-dom';
 
 import './reset.css';
@@ -17,30 +19,29 @@ import Page404 from './404';
 import Projects from './Projects';
 import About from './About';
 
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route
+    path=""
+    element={(
+      <>
+        <ScrollRestoration />
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </>
+    )}
+  >
+    <Route index element={<Navigate to="/projects" />} />
+    <Route path="*" element={<Page404 />} />
+    <Route path="projects/*" element={<Projects />} />
+    <Route path="about" element={<About />} />
+  </Route>,
+));
+
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path=""
-          element={(
-            <>
-              <Header />
-              <main>
-                <Outlet />
-              </main>
-              <Footer />
-            </>
-          )}
-        >
-          <Route index element={<Navigate to="/projects" />} />
-          <Route path="*" element={<Page404 />} />
-          <Route path="projects/*" element={<Projects />} />
-          <Route path="about" element={<About />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
