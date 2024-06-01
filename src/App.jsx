@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter,
+  Navigate,
   Outlet,
   Routes,
   Route,
@@ -32,6 +33,7 @@ function App() {
             </>
           )}
         >
+          <Route index element={<Navigate to="/projects" />} />
           <Route path="*" element={<Page404 />} />
           <Route path="projects/*" element={<Projects />} />
           <Route path="about" element={<About />} />
