@@ -55,12 +55,36 @@
   padding-left: 0;
   list-style-position: inside;
 }
+@media (max-width: 899px) {
+  .deck-box #manila-paper ol > li {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .deck-box #manila-paper ol > li {
+    grid-template-columns: 1fr 1fr;
+  }
+  .deck-box #manila-paper ol > li > *:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+@media (max-width: 450px) {
+  .deck-box #manila-paper ol > li {
+    grid-template-columns: 1fr;
+  }
+}
 
 .deck-box #cardboard > div {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+}
+@media (max-width: 500px) {
+  .deck-box #cardboard > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 .deck-box #CAD > div {
