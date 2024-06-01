@@ -47,6 +47,7 @@
   border-radius: 0;
   border-bottom: 2px solid var(--color-neutral-dark);
   margin-bottom: 1rem;
+  margin-top: 0rem;
   gap: 1rem;
   padding-bottom: 0.5rem;
 }
