@@ -22,8 +22,8 @@ dialog {
   border: none;
 }
 dialog img {
-  max-width: 90svw;
-  max-height: 90svh;
+  max-width: calc(100svw - 4rem);
+  max-height: calc(100svh - 8rem);
 }
 dialog::backdrop {
   backdrop-filter: blur(4px);
@@ -38,11 +38,7 @@ dialog button span {
   position: absolute;
   visibility: hidden;
 }
-dialog figcaption {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: white;
+.image dialog figcaption {
   font-size: 1.25rem;
-  padding: 0.5rem;
+  margin: 1rem 0 0 0;
 }
